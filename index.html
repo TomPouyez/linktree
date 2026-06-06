@@ -10,7 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 1. Effets d'interaction (Hover / Active) */
+        .link-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .link-btn:hover {
+            transform: translateY(-3px); /* Le bouton remonte légèrement */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Apparition d'une ombre douce */
+        }
+        
+        .link-btn:active {
+            transform: translateY(0); /* Redescend au clic */
+        }
+
+        /* 2. Alignement des icônes fixées à gauche */
+        .link-btn i {
+            position: absolute;
+            left: 24px; /* Fixe l'icône à 24px du bord gauche */
+            font-size: 1.2em;
+        }
+
+        /* 3. Ajustement spécifique pour le bouton principal avec sous-titre */
+        .primary .btn-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .primary i {
+            font-size: 1.4em;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,22 +63,36 @@
 
         <nav class="links-wrapper" aria-label="Liens principaux">
             <a href="https://www.planity.com/planet-coiffure-06200-nice" target="_blank" rel="noopener noreferrer" class="link-btn primary">
+                <i class="fa-regular fa-calendar-check"></i>
                 <div class="btn-content">
                     <span>Prendre Rendez-vous</span>
                     <span class="btn-subtitle">Réservation rapide</span>
                 </div>
             </a>
             
-            <a href="https://votre-pseudo.github.io/votre-repo-portfolio/" target="_blank" rel="noopener noreferrer" class="link-btn">
-                Voir mes créations
+            <a href="https://mel-touch.fr" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-regular fa-image"></i>
+                <span>Voir mes créations</span>
             </a>
 
-            <a href="https://wa.me/33600000000" target="_blank" rel="noopener noreferrer" class="link-btn">
-                Une question ? Contactez-moi
+            <a href="https://wa.me/33647177914" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Une question ? Contactez-moi</span>
             </a>
             
-            <a href="https://instagram.com/votre_compte" target="_blank" rel="noopener noreferrer" class="link-btn">
-                Me suivre sur Instagram
+            <a href="https://www.instagram.com/mel.s_touch" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Me suivre sur Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@mels_touch06?_r=1&_t=ZN-96zbCcQ2NQU" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>Me découvrir sur TikTok</span>
+            </a>
+
+            <a href="https://faq.mel-touch.fr" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-regular fa-circle-question"></i>
+                <span>FAQ - Questions fréquentes</span>
             </a>
         </nav>
 
